@@ -1,0 +1,211 @@
+login.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="index.js"></script>
+    <title>WP | Login</title>
+</head>
+<body>
+  <!-- Header -->
+    <header> Welcome Party </header>
+    <h2>Login Form</h2>
+  <!-- Login Form -->
+    <form id="loginForm" action="/login" method="post">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" onclick="navigateToMain()">Login</button>
+            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            <div><span class="signup"><a href="#" onclick="navigateToRegister()">Sign Up</a></span></div>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+  function navigateToRegister() {
+      window.location.href = "register.html";
+  }
+
+  function navigateToMain() {
+      // Perform any login-related actions here if needed
+
+      // Redirect to the main page
+      window.location.href = "main.html";
+  }
+</script>
+
+register.html:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="index.js"></script>
+    <title>WP | Register</title>
+</head>
+<body>
+    <header> Welcome Party </header>
+    <form action="/action_page.php">
+        <div class="container">
+          <h1>Register</h1>
+          <p>Fill the following form to create an account: </p>
+          <hr>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="phone"><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required>
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="House #, Street #, Sub-Area, City" name="address" id="address" required>
+          <hr>
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+        <div class="container signin">
+          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+        </div>
+      </form>
+</body>
+</html>
+
+main.html: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="index.js"></script>
+    <title>WP | Main Page</title>
+</head>
+<body>
+    <header> Welcome Party </header>
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="main.html">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">View</a>
+          <div class="dropdown-content">
+            <a href="vote.html">Vote on Menu</a>
+            <a href="diet.html">Dietary Preferences</a>
+            <a href="family.html">Family</a>
+            <a href="performance.html">Performance Proposal</a>
+          </div>
+        </li>
+        <li style="float:right" class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+                <a href="editprofile.html">Edit Profile</a>
+                <a href="login.html">Log out</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- First glimpse of the website -->
+    <section class="section-intro">
+        <header>
+            <h1>Welcome To FASTs Welcome Party Website!</h1>
+        </header>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <article>
+            <h3>
+                Start off your university life with a BANG!
+            </h3>
+            <p>
+                Step into a world of celebration and camaraderie as we invite you to the grand Welcome Party.
+                A gathering where memories are made, friendships are forged, and laughter echoes through the air. 
+                Join us in embracing the spirit of togetherness, as we kick off an unforgettable experience filled with joy, 
+                excitement, and the promise of new beginnings. Get ready to embark on a journey of fun and festivities, 
+                surrounded by a community that values warmth, inclusion, and the sheer delight of coming together. 
+                Welcome to a celebration like no other - the Welcome Party awaits you!
+            </p>
+        </article>
+    </section>
+
+    <!-- Shows pictures of previous events -->
+    <div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="wp1.jpg" style="width:100%">
+            <div class="text">CY WELCOME 23</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="wp2.jpg" style="width:100%">
+            <div class="text">CS WELCOME 23</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="wp3.jpg" style="width:100%">
+          <div class="text">FSM WELCOME 23</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="wp4.jpg" style="width:100%">
+            <div class="text">AI/DS WELCOME 23</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="wp5.jpg" style="width:100%">
+            <div class="text">AI/DS WELCOME 23</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="wp6.jpg" style="width:100%">
+            <div class="text">AI/DS WELCOME 23</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+</script>
